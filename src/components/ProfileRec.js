@@ -189,7 +189,7 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
     const profile = profiles[key];
 
     // Generate the link URL
-    const linkUrl = profile ? `https://dictionarry.pages.dev/Profiles/${profile.profile.replace(/ /g, '')}` : '';
+    const linkUrl = profile ? `https://dictionarry.pages.dev/Profiles/${encodeURIComponent(profile.profile)}` : '';
 
     const renderProfileInfo = () => {
         if (!profile || profile.profile === 'N/A') {
