@@ -3,185 +3,184 @@ import React from 'react';
 const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibility }) => {
     const profiles = {
         'OptimalHardLegacy': {
-            profile: '1080p Remux (Single Grab)',
-            size: '20 - 40gb',
-            comment: 'Prioritises 1080p h264 bluray remuxes. Lossless audio preffered, lossy audio banned. HDR bannned. No upgrades allowed.'
+            profile: '2160p WEB-DL (Single Grab)',
+            size: '20 - 30gb',
+            comment: 'Prioritizes 2160p WEB-DLs with a single grab. Lossless audio is preferred, and HDR is banned. No upgrades allowed.'
         },
         'OptimalHardStandard': {
-            profile: '4k WEB-DL (Single Grab)',
-            size: '20 - 30gb',
-            comment: 'Prioritises tier 1 WEB-DLs - AMZN, MA, APTV. Allows fallback to lower tier web sources. Lossless audio allowed, but lossy audio is preferred. All types of HDR is allowed, with the option to ban Dolby Vision w/out fallback. No upgrades allowed.'
-
+            profile: '1080p Remux (Single Grab)',
+            size: '30 - 40gb',
+            comment: 'Prioritizes 1080p remuxes with a single grab. Lossless audio is allowed, but lossy audio is preferred. No upgrades allowed.'
         },
         'OptimalHardBleeding Edge': {
-            profile: '4k Remux (Single Grab)',
+            profile: '2160p Remux (Single Grab)',
             size: '> 50gb',
-            comment: 'Prioritises 4k h265 UHD bluray remuxes. Lossless audio preffered, lossy audio banned. HDR allowed, DV without fallback banned. No upgrades allowed.'
+            comment: 'Prioritizes 2160p remuxes with a single grab. Lossless audio is preferred, and HDR is allowed, but Dolby Vision without fallback is banned. No upgrades allowed.'
         },
         'OptimalModerateLegacy': {
-            profile: '1080p Remux (Double Grab)',
-            size: '20 - 40gb',
-            comment: 'Prioritises 1080p h264 bluray remuxes. Lossless audio preffered, lossy audio banned. HDR bannned. 1 upgrade allowed from web -> bluray'
+            profile: '2160p WEB-DL',
+            size: '20 - 30gb',
+            comment: 'Prioritizes 2160p WEB-DLs. Lossless audio is preferred, and HDR is banned. No upgrades allowed.'
         },
         'OptimalModerateStandard': {
-            profile: '4k WEB-DL',
-            size: '20 - 30gb',
-            comment: 'Prioritises tier 1 WEB-DLs - AMZN, MA, APTV. Allows fallback to lower tier web sources. Lossless audio allowed, but lossy audio is preferred. All types of HDR is allowed, with the option to ban Dolby Vision w/out fallback.'
+            profile: '1080p Remux (Double Grab)',
+            size: '30 - 40gb',
+            comment: 'Prioritizes 1080p remuxes with a double grab. Lossless audio is allowed, but lossy audio is preferred. One upgrade is allowed from web to bluray.'
         },
         'OptimalModerateBleeding Edge': {
-            profile: '4k Remux (Double Grab)',
+            profile: '2160p Remux (Double Grab)',
             size: '> 50gb',
-            comment: 'Prioritises 4k h265 UHD bluray remuxes. Lossless audio preffered, lossy audio banned. HDR allowed, DV without fallback banned. 1 upgrade allowed from web -> bluray'
+            comment: 'Prioritizes 2160p remuxes with a double grab. Lossless audio is preferred, and HDR is allowed, but Dolby Vision without fallback is banned. One upgrade is allowed from web to bluray.'
         },
         'OptimalSoftLegacy': {
-            profile: '1080p Remux',
-            size: '30 - 40gb',
-            comment: 'Prioritises 1080p h264 bluray remuxes. Lossless audio preffered, lossy audio banned. HDR bannned. All upgrades allowed'
+            profile: '2160p Transparent',
+            size: '20-40gb',
+            comment: 'Prioritizes 2160p transparent releases. Lossless audio is preferred, and HDR is banned. All upgrades are allowed.'
         },
         'OptimalSoftStandard': {
-            profile: '4k x265 Encode',
-            size: '20-40gb',
-            comment: '4k Bluray / Webrip x265 Encode, with fallback to a 4k WEB-DL. h265, lossless audio, HDR allowed. All upgrades allowed.'
+            profile: '1080p Remux',
+            size: '30 - 40gb',
+            comment: 'Prioritizes 1080p remuxes. Lossless audio is preferred, and HDR is banned. All upgrades are allowed.'
         },
         'OptimalSoftBleeding Edge': {
-            profile: '4k Remux',
+            profile: '2160p Remux',
             size: '> 50gb',
-            comment: 'Prioritises 4k h265 UHD bluray remuxes. Lossless audio preffered, lossy audio banned. HDR allowed, DV without fallback banned. All upgrades allowed'
+            comment: 'Prioritizes 2160p remuxes. Lossless audio is preferred, and HDR is allowed, but Dolby Vision without fallback is banned. All upgrades are allowed.'
         },
         'TransparentHardLegacy': {
-            profile: '1080p x264 Encode (Single Grab)',
+            profile: '1080p Transparent (Single Grab)',
             size: '10 - 15gb',
-            comment: '1080p Bluray or WEBRIP prioritised. Allows fallback to a 1080p WEB-DL. x264 only. Lossy audio. No upgrades allowed. No HDR.'
+            comment: 'Prioritizes 1080p transparent releases with a single grab. Lossy audio is allowed, and HDR is banned. No upgrades allowed.'
         },
         'TransparentHardStandard': {
-            profile: '1080p x265 Encode (Single Grab)',
+            profile: '1080p x265 Transparent (Single Grab)',
             size: '5 - 10gb',
-            comment: '1080p Bluray or WEBRIP, with fallback to a 1080p WEB-DL. x265 preferred, fallback to x264. Lossy or lossless audio. No upgrades allowed. No HDR.'
+            comment: 'Prioritizes 1080p x265 transparent releases with a single grab. Lossy or lossless audio is allowed, and HDR is banned. No upgrades allowed.'
         },
         'TransparentHardBleeding Edge': {
-            profile: '1080p x265 HDR Encode (Single Grab)',
+            profile: '1080p HDR Transparent (Single Grab)',
             size: '15 - 20gb',
-            comment: '1080p Bluray or WEBRIP prioritised. Allows fallback to a 1080p WEB-DL. x265 preferred, fallback to x264. Lossy or lossless audio. No upgrades allowed. HDR allowed.'
+            comment: 'Prioritizes 1080p HDR transparent releases with a single grab. Lossy or lossless audio is allowed, and HDR is allowed. No upgrades allowed.'
         },
         'TransparentModerateLegacy': {
-            profile: '1080p x264 Encode (Double Grab)',
+            profile: '1080p Transparent (Double Grab)',
             size: '10 - 15gb',
-            comment: '1080p Bluray or WEBRIP prioritsed Golden Popcorns. Allows fallback to a 1080p WEB-DL. x264 only. Lossy audio 1 upgrade allowed from web -> bluray. No HDR.'
+            comment: 'Prioritizes 1080p transparent releases with a double grab. Lossy audio is allowed, and HDR is banned. One upgrade is allowed from web to bluray.'
         },
         'TransparentModerateStandard': {
-            profile: '1080p x265 Encode (Double Grab)',
+            profile: '1080p x265 Transparent (Double Grab)',
             size: '5 - 10gb',
-            comment: '1080p Bluray or WEBRIP, with fallback to a 1080p WEB-DL. x265 preferred, fallback to x264. Lossy or lossless audio. 1 upgrade allowed from web -> bluray. No HDR.'
+            comment: 'Prioritizes 1080p x265 transparent releases with a double grab. Lossy or lossless audio is allowed, and one upgrade is allowed from web to bluray. HDR is banned.'
         },
         'TransparentModerateBleeding Edge': {
-            profile: '1080p x265 HDR Encode (Double Grab)',
+            profile: '1080p HDR Transparent (Double Grab)',
             size: '15 - 20gb',
-            comment: '1080p Bluray or WEBRIP prioritsed Golden Popcorns. Allows fallback to a 1080p WEB-DL. x265 preferred, fallback to x264. Lossy or lossless audio. 1 upgrade allowed from web -> bluray. HDR allowed.'
+            comment: 'Prioritizes 1080p HDR transparent releases with a double grab. Lossy or lossless audio is allowed, and one upgrade is allowed from web to bluray. HDR is allowed.'
         },
         'TransparentSoftLegacy': {
-            profile: '1080p x264 Encode',
+            profile: '1080p Transparent',
             size: '10 - 15gb',
-            comment: '1080p Bluray or WEBRIP prioritsed Golden Popcorns. Allows fallback to a 1080p WEB-DL. x264 only. Lossy audio. All upgrades allowed. No HDR.'
+            comment: 'Prioritizes 1080p transparent releases. Lossy audio is allowed, and all upgrades are allowed. HDR is banned.'
         },
         'TransparentSoftStandard': {
-            profile: '1080p x265 Encode',
+            profile: '1080p x265 Transparent',
             size: '5 - 10gb',
-            comment: '1080p Bluray or WEBRIP, with fallback to a 1080p WEB-DL. x265 preferred, fallback to x264. Lossy or lossless audio. All upgrades allowed. No HDR.'
+            comment: 'Prioritizes 1080p x265 transparent releases. Lossy or lossless audio is allowed, and all upgrades are allowed. HDR is banned.'
         },
         'TransparentSoftBleeding Edge': {
-            profile: '1080p x265 HDR Encode',
+            profile: '1080p HDR Transparent',
             size: '15 - 20gb',
-            comment: '1080p Bluray or WEBRIP, with fallback to a 1080p WEB-DL. x265 preferred, fallback to x264. Lossy or lossless audio. All upgrades allowed. HDR allowed.'
+            comment: 'Prioritizes 1080p HDR transparent releases. Lossy or lossless audio is allowed, and all upgrades are allowed. HDR is allowed.'
         },
         'BalancedHardLegacy': {
             profile: '1080p WEB-DL (Single Grab)',
             size: '5 - 10gb',
-            comment: 'Single grab from the currently highest tier available WEB source.'
+            comment: 'Prioritizes 1080p WEB-DLs with a single grab from the highest tier available web source.'
         },
         'BalancedHardStandard': {
             profile: '1080p WEB-DL (Single Grab)',
             size: '5 - 10gb',
-            comment: 'Single grab from the currently highest tier available WEB source.'
+            comment: 'Prioritizes 1080p WEB-DLs with a single grab from the highest tier available web source.'
         },
         'BalancedHardBleeding Edge': {
-            profile: '1080p x265 WEB-DL (Single Grab)',
+            profile: '1080p h265 WEB-DL (Single Grab)',
             size: '4 - 8gb',
-            comment: 'x265 preferred, fallback to x264. Single grab from a web source.'
+            comment: 'Prioritizes 1080p h265 WEB-DLs with a single grab. x265 is preferred, with fallback to x264.'
         },
         'BalancedModerateLegacy': {
             profile: 'N/A',
             size: 'N/A',
-            comment: 'Too similar to next Balanced + Moderate + Standard.'
+            comment: 'This combination is too similar to the next Balanced + Moderate + Standard option.'
         },
         'BalancedModerateStandard': {
             profile: '1080p WEB-DL',
             size: '5 - 10gb',
-            comment: '1080p WEB-DLs preferred. Also allows BHDstudio bluray Encodes, which are ranked equally to tier 1 web sources. Fallback to lower tier web sources, all upgrades allowed.'
+            comment: 'Prioritizes 1080p WEB-DLs. Allows BHDstudio bluray encodes, which are ranked equally to tier 1 web sources. Fallback to lower tier web sources is allowed, and all upgrades are allowed.'
         },
         'BalancedModerateBleeding Edge': {
             profile: '1080p h265 WEB-DL',
             size: '4 - 8gb',
-            comment: '1080p h265 WEB-DLs preferred, fallback to 1080p h264 WEB-DLs. All upgrades allowed.'
+            comment: 'Prioritizes 1080p h265 WEB-DLs, with fallback to 1080p h264 WEB-DLs. All upgrades are allowed.'
         },
         'BalancedSoftLegacy': {
             profile: '720p x264 Encode',
             size: '5 - 10gb',
-            comment: 'Prioritises 720p Golden Popcorn Encodes. Lossy audio only, has fallback to 1080p WEB-DLs. 720p WEB-DLs are too LQ.'
+            comment: 'Prioritizes 720p x264 Golden Popcorn encodes. Lossy audio only, with fallback to 1080p WEB-DLs. 720p WEB-DLs are considered too low quality.'
         },
         'BalancedSoftStandard': {
             profile: '1080p WEB-DL',
             size: '5 - 10gb',
-            comment: '1080p WEB-DLs preferred. Also allows BHDstudio bluray Encodes, which are ranked equally to tier 1 web sources. Fallback to lower tier web sources, all upgrades allowed.'
+            comment: 'Prioritizes 1080p WEB-DLs. Allows BHDstudio bluray encodes, which are ranked equally to tier 1 web sources. Fallback to lower tier web sources is allowed, and all upgrades are allowed.'
         },
         'BalancedSoftBleeding Edge': {
             profile: '1080p h265 WEB-DL',
             size: '4 - 8gb',
-            comment: '1080p h265 WEB-DLs preferred, fallback to 1080p h264 WEB-DLs. All upgrades allowed.'
+            comment: 'Prioritizes 1080p h265 WEB-DLs, with fallback to 1080p h264 WEB-DLs. All upgrades are allowed.'
         },
         'MinimalHardLegacy': {
-            profile: 'SD Xvid Encodes',
-            size: '< 3gb',
-            comment: 'SD Xvid only, always smaller than 3gb. No upgrades allowed.'
+            profile: 'SD Legacy',
+            size: '< 1gb',
+            comment: 'Prioritizes SD Legacy releases, always smaller than 1gb. No upgrades allowed.'
         },
         'MinimalHardStandard': {
-            profile: 'SD x264 Encodes',
-            size: '< 3gb',
-            comment: 'SD x264 only, always smaller than 3gb. No upgrades allowed.'
+            profile: 'SD Transparent',
+            size: '< 5gb',
+            comment: 'Prioritizes SD Transparent releases, always smaller than 5gb. No upgrades allowed.'
         },
         'MinimalHardBleeding Edge': {
-            profile: 'Micro x265 Encodes',
+            profile: 'Micro Encodes',
             size: '< 3gb',
-            comment: 'Any resolution is allowed, as long as it\'s below 3gb. Prioritises x265, but has fallback to x264.'
+            comment: 'Prioritizes Micro Encodes with any resolution below 3gb. x265 is preferred, but fallback to x264 is allowed.'
         },
         'MinimalModerateLegacy': {
-            profile: 'SD Xvid Encodes',
-            size: '< 3gb',
-            comment: 'SD only, xvid only, always smaller than 3gb. No upgrades needed.'
+            profile: 'SD Legacy',
+            size: '< 1gb',
+            comment: 'Prioritizes SD Legacy releases, always smaller than 1gb. No upgrades needed.'
         },
         'MinimalModerateStandard': {
-            profile: 'SD x264 Encodes',
-            size: '< 3gb',
-            comment: 'SD only, x264 only, always smaller than 3gb. No upgrades needed.'
+            profile: 'SD Transparent',
+            size: '< 5gb',
+            comment: 'Prioritizes SD Transparent releases, always smaller than 5gb. No upgrades needed.'
         },
         'MinimalModerateBleeding Edge': {
-            profile: 'Micro x265 Encodes',
+            profile: 'Micro Encodes',
             size: '< 3gb',
-            comment: 'Any resolution, always smaller than 3gb. No upgrades needed.'
+            comment: 'Prioritizes Micro Encodes with any resolution below 3gb. No upgrades needed.'
         },
         'MinimalSoftLegacy': {
-            profile: 'SD Xvid Encodes',
-            size: '< 3gb',
-            comment: 'SD only, xvid only, always smaller than 3gb. No upgrades needed.'
+            profile: 'SD Legacy',
+            size: '< 1gb',
+            comment: 'Prioritizes SD Legacy releases, always smaller than 1gb. No upgrades needed.'
         },
         'MinimalSoftStandard': {
-            profile: 'SD x264 Encodes',
+            profile: 'SD Transparent',
             size: '< 5gb',
-            comment: 'SD only, x264 only, always smaller than 3gb. No upgrades needed.'
+            comment: 'Prioritizes SD Transparent releases, always smaller than 5gb. No upgrades needed.'
         },
         'MinimalSoftBleeding Edge': {
-            profile: 'Micro x265 Encodes',
-            size: '< 2gb',
-            comment: 'Any resolution, always smaller than 3gb. No upgrades needed.'
+            profile: 'Micro Encodes',
+            size: '< 3gb',
+            comment: 'Prioritizes Micro Encodes with any resolution below 3gb. No upgrades needed.'
         }
     };
 
