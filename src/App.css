@@ -1,0 +1,119 @@
+/* App.css */
+body {
+  font-family: "Source Sans Pro", sans-serif !important;
+  background-color: #1e2129 !important;
+  color: white !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Schibsted Grotesk", sans-serif !important;
+}
+
+h6 {
+  margin-bottom: 0 !important;
+}
+
+h3,
+h4 {
+  color: #ffc107 !important;
+}
+
+.table-dark thead th {
+  background-color: #495057; /* Adjust the color as needed */
+  color: white; /* Adjust the color as needed */
+}
+
+.table-dark tbody tr td:hover {
+  background-color: #3f4451; /* Lighter hover color */
+}
+
+.table-dark .selected {
+  background-color: #5a6268; /* Lighter selected color */
+}
+
+.table-dark .selected:hover {
+  background-color: #6c757d; /* Lighter hover color for selected cells */
+}
+
+.info-box-title {
+  padding-bottom: 0.5em !important;
+}
+
+.clickable-cell {
+  cursor: pointer;
+}
+
+/* App.css */
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SelectionTable {
+  width: 70%; /* Adjust this value as needed */
+}
+
+.ProfileRec {
+  padding-left: 20px; /* Adjust this value as needed */
+}
+
+.custom-navbar {
+  background-color: #14151a;
+  padding-top: 20px !important; /* Increase top padding */
+  padding-bottom: 20px !important; /* Increase bottom padding */
+}
+
+.tool-explanation {
+  color: #f8f9fa; /* Light color for text */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.tool-explanation h5 {
+  color: #ffffff; /* Bright color for the title */
+  margin-bottom: 15px;
+}
+
+.explain-title {
+  padding-bottom: 10px !important;
+}
+
+html,
+body {
+  height: 100%; /* Ensure the html and body are at least the height of the viewport */
+  margin: 0; /* Reset any default margin */
+}
+
+#root {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100%; /* Minimum height to fill the viewport */
+}
+
+.container.App {
+  flex: 1; /* Grow to absorb space */
+  /* Remove the margin-top if you want the container to start right under the navbar */
+}
+
+footer {
+  background-color: #14151a; /* Footer background color */
+  color: white; /* Footer text color */
+  margin-top: 50px;
+}
+
+/* Add this CSS to your component's stylesheet */
+.profile-link {
+  color: #007bff; /* Blue color for the link */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.profile-link:hover {
+  color: #0056b3; /* Darker blue color on hover */
+}

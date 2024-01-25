@@ -1,0 +1,9 @@
+.table-responsive {
+  margin: 0 auto;
+  width: auto;
+}
+
+.selected {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+}
