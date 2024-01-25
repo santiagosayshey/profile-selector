@@ -16,6 +16,9 @@ const ToolExplanation = () => {
                         Based on your selections, the tool will recommend the most suitable
                         profile for you.
                     </p>
+                    <p className="card-text">
+                        Disclaimer: Most profiles are still in development and links will lead to an error on the main site. For now, check out the 1080p Transparent and 2160p Optimal profiles!
+                    </p>
                 </div>
             </div>
         </div>
