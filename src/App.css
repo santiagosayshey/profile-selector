@@ -117,3 +117,14 @@ footer {
 .profile-link:hover {
   color: #0056b3; /* Darker blue color on hover */
 }
+
+/* Initial state of the navbar brand */
+.navbar-brand-hover {
+  opacity: 1;
+  transition: opacity 0.5s ease; /* Smooth transition for the opacity */
+}
+
+/* Hover state */
+.navbar-brand-hover:hover {
+  opacity: 0.6; /* Change the opacity to 60% on hover */
+}

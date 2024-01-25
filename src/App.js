@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SelectionTable from './components/SelectionTable';
-
 import InfoBox from './components/InfoBox';
 import ToolExplanation from './components/ToolExplanation';
 import './App.css';
@@ -16,8 +15,12 @@ function App() {
     <>
       <nav className="navbar navbar-dark custom-navbar mb-3 navbar-bottom-border">
         <div className="container d-flex justify-content-start align-items-center">
-          <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-top mr-3" />
-          <h2 className="mb-0 ms-3">Profile Selector</h2>
+          <a href="https://dictionarry.pages.dev/"
+            className="d-flex align-items-center text-decoration-none navbar-brand-hover">
+            <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-top mr-3" />
+            <h2 className="mb-0 ms-3 text-white">Profile Selector</h2>
+          </a>
+
         </div>
       </nav>
       <ToolExplanation />
