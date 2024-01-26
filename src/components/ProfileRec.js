@@ -14,14 +14,14 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
             size: '30 - 40gb',
             comment: 'Prioritizes 1080p remuxes with a single grab. Lossless audio is allowed, but lossy audio is preferred. No upgrades allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/1080p Optimal',
-            status: 'Coming Soon!'
+            status: 'Available'
         },
         'OptimalHardBleeding Edge': {
             profile: '2160p Optimal (Single Grab)',
             size: '> 50gb',
             comment: 'Prioritizes 2160p remuxes with a single grab. Lossless audio is preferred, and HDR is allowed, but Dolby Vision without fallback is banned. No upgrades allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/2160p Optimal',
-            status: 'Coming Soon!'
+            status: 'Available'
         },
         'OptimalModerateLegacy': {
             profile: '2160p Balanced',
@@ -56,7 +56,7 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
             size: '30 - 40gb',
             comment: 'Prioritizes 1080p remuxes. Lossless audio is preferred, and HDR is banned. All upgrades are allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/1080p Optimal',
-            status: 'Coming Soon!'
+            status: 'Available'
         },
         'OptimalSoftBleeding Edge': {
             profile: '2160p Optimal',
