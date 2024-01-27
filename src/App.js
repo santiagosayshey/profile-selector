@@ -18,7 +18,7 @@ function App() {
           <a href="https://dictionarry.pages.dev/"
             className="d-flex align-items-center text-decoration-none navbar-brand-hover">
             <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-top mr-3" />
-            <h2 className="mb-0 ms-3 text-white">Profile Selector</h2>
+            <h2 className="mb-0 ms-3 text-white">Dictionarry</h2>
           </a>
 
         </div>

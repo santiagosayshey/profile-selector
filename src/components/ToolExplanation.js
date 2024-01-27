@@ -17,7 +17,7 @@ const ToolExplanation = () => {
                         profile for you.
                     </p>
                     <p className="card-text">
-                        Disclaimer: Most profiles are still in development and not available yet. Check back soon!
+                        Disclaimer: Some profiles are still in development and not available yet. Come back soon!
                     </p>
                 </div>
             </div>
