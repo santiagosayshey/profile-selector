@@ -5,7 +5,7 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
         'OptimalHardLegacy': {
             profile: '2160p Balanced (Single Grab)',
             size: '20 - 30gb',
-            comment: 'Prioritizes 2160p WEB-DLs with a single grab. Lossless audio is preferred, and HDR is banned. No upgrades allowed.',
+            comment: 'Prioritizes 2160p WEB-DLs with a single grab. Lossless audio is preferred, and HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback. No upgrades allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/2160p Balanced',
             status: 'Coming Soon!'
         },
@@ -19,14 +19,14 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
         'OptimalHardBleeding Edge': {
             profile: '2160p Optimal (Single Grab)',
             size: '> 50gb',
-            comment: 'Prioritizes 2160p remuxes with a single grab. Lossless audio is preferred, and HDR is allowed, but Dolby Vision without fallback is banned. No upgrades allowed.',
+            comment: 'Prioritizes 2160p remuxes with a single grab. Lossless audio is preferred, and HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback. No upgrades allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/2160p Optimal',
             status: 'Available'
         },
         'OptimalModerateLegacy': {
             profile: '2160p Balanced',
             size: '20 - 30gb',
-            comment: 'Prioritizes 2160p WEB-DLs. Lossless audio is preferred, and HDR is banned. No upgrades allowed.',
+            comment: 'Prioritizes 2160p WEB-DLs. Lossless audio is preferred, and HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback. No upgrades allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/2160p Balanced',
             status: 'Coming Soon!'
         },
@@ -40,14 +40,14 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
         'OptimalModerateBleeding Edge': {
             profile: '2160p Optimal (Double Grab)',
             size: '> 50gb',
-            comment: 'Prioritizes 2160p remuxes with a double grab. Lossless audio is preferred, and HDR is allowed, but Dolby Vision without fallback is banned. One upgrade is allowed from web to bluray.',
+            comment: 'Prioritizes 2160p remuxes with a double grab. Lossless audio is preferred, and HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback. One upgrade is allowed from web to bluray.',
             link: 'https://dictionarry.pages.dev/Profiles/2160p Optimal',
             status: 'Coming Soon!'
         },
         'OptimalSoftLegacy': {
             profile: '2160p Transparent',
             size: '20-40gb',
-            comment: 'Prioritizes 2160p transparent releases. Lossless audio is preferred, and HDR is banned. All upgrades are allowed.',
+            comment: 'Prioritizes 2160p transparent releases. Lossless audio is preferred, and HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback. All upgrades are allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/2160p Transparent',
             status: 'Coming Soon!'
         },
@@ -61,7 +61,7 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
         'OptimalSoftBleeding Edge': {
             profile: '2160p Optimal',
             size: '> 50gb',
-            comment: 'Prioritizes 2160p remuxes. Lossless audio is preferred, and HDR is allowed, but Dolby Vision without fallback is banned. All upgrades are allowed.',
+            comment: 'Prioritizes 2160p remuxes. Lossless audio is preferred, and HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback. All upgrades are allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/2160p Optimal',
             status: 'Available'
         },
@@ -82,7 +82,7 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
         'TransparentHardBleeding Edge': {
             profile: '1080p HDR Transparent (Single Grab)',
             size: '15 - 20gb',
-            comment: 'Prioritizes 1080p HDR transparent releases with a single grab. Lossy or lossless audio is allowed, and HDR is allowed. No upgrades allowed.',
+            comment: 'Prioritizes 1080p HDR transparent releases with a single grab. Lossy or lossless audio is allowed, and HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback. No upgrades allowed.',
             link: 'https://dictionarry.pages.dev/Profiles/1080p HDR Transparent',
             status: 'Coming Soon!'
         },
@@ -103,7 +103,7 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
         'TransparentModerateBleeding Edge': {
             profile: '1080p HDR Transparent (Double Grab)',
             size: '15 - 20gb',
-            comment: 'Prioritizes 1080p HDR transparent releases with a double grab. Lossy or lossless audio is allowed, and one upgrade is allowed from web to bluray. HDR is allowed.',
+            comment: 'Prioritizes 1080p HDR transparent releases with a double grab. Lossy or lossless audio is allowed, and one upgrade is allowed from web to bluray. HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback.',
             link: 'https://dictionarry.pages.dev/Profiles/1080p HDR Transparent',
             status: 'Coming Soon!'
         },
@@ -124,7 +124,7 @@ const ProfileRec = ({ selectedQuality, selectedImmutability, selectedCompatibili
         'TransparentSoftBleeding Edge': {
             profile: '1080p HDR Transparent',
             size: '15 - 20gb',
-            comment: 'Prioritizes 1080p HDR transparent releases. Lossy or lossless audio is allowed, and all upgrades are allowed. HDR is allowed.',
+            comment: 'Prioritizes 1080p HDR transparent releases. Lossy or lossless audio is allowed, and all upgrades are allowed. HDR is allowed. Dolby Vision is allowed, provided there is HDR10 fallback.',
             link: 'https://dictionarry.pages.dev/Profiles/1080p HDR Transparent',
             status: 'Coming Soon!'
         },
